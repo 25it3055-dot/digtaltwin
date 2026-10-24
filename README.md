@@ -51,12 +51,12 @@ ArogyaSanket demonstrates how wearable-style data and historical records can be 
 
 ## 👥 4. Team Details
 
-- **Team Name:** [Enter Team Name]
-- **Team Leader:** [Enter Team Leader Name]
-- **Team Members:** [Enter All Team Members]
-- **College / Institution:** [Enter College Name]
-- **Department:** [Enter Department]
-- **Incubator:** [Enter Incubator Name or N/A]
+- **Team Name:** [thundercode]
+- **Team Leader:** [Soumya singh]
+- **Team Members:** [gitanjali, soumya singh , manasvi rai and priyanshu gaurav]
+- **College / Institution:** [rajiv gandhi insitiute of petroluem technology]
+- **Department:** [CSE]
+*Incubator:** [NA]
 
 ## 🛠️ 5. Technical Stack
 
