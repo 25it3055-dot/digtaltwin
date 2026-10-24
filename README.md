@@ -1,137 +1,231 @@
-# ArogyaSanket — Complete Prototype
+# 🩺 ArogyaSanket
+### AI-Assisted Health Trend Analysis | Digital Twin Challenge 2026
 
-A full-stack educational prototype containing a React/Vite dashboard, FastAPI backend, API tests, wearable-data quality auditing, a non-destructive preprocessing pipeline, integration checklist, model-readiness gate, and deployment/demo documentation.
+**Project Theme:** Healthcare Analytics, Artificial Intelligence and Digital Health  
+**Problem Statement:** Option C — Predict Deterioration Risk from Sleep and Activity
 
-> **Clinical safety notice:** This is not a medical device. The current score is an illustrative rule-based demo indicator, not a trained model, probability, or clinically validated deterioration prediction. Never use it for diagnosis, triage, treatment, or real patient-care decisions. Use synthetic data only.
+---
+
+## 📌 1. Project Overview
+
+ArogyaSanket is a healthcare analytics prototype that explores how sleep quality, daily physical activity, heart rate and patient history can be combined to understand changes in health-related trends over time.
+
+The project aims to demonstrate how data processing, transparent analytical indicators and machine-learning techniques can help identify patterns that may deserve further attention.
+
+### Key Objectives
+
+- Analyze sleep, steps and heart-rate data.
+- Explore historical health trends.
+- Identify unusual patterns and data-quality issues.
+- Visualize changes in health indicators over time.
+- Demonstrate an explainable AI/ML workflow.
+- Provide a clear interface for exploring health-related data.
+
+## 🎯 2. Problem Statement
+
+**Digital Twin Challenge 2026 — Option C: Predict deterioration risk from sleep and activity.**
+
+The challenge is to combine patient history, sleep quality, step counts and heart rate to identify patterns associated with a predefined risk outcome and show how the indicator changes over time.
+
+ArogyaSanket explores this challenge through a healthcare analytics interface and a data-driven analysis workflow.
+
+## 🏥 3. Healthcare Use Case
+
+ArogyaSanket demonstrates how wearable-style data and historical records can be explored together.
+
+### Example Inputs
+- Sleep duration and sleep quality
+- Daily step count
+- Heart-rate readings
+- Timestamped activity records
+- Historical context, where available
+
+### Expected Outputs
+- Visual summaries of health-related trends
+- Identification of missing or unusual readings
+- Illustrative indicators based on available inputs
+- Time-based comparisons
+- Explanations of the factors contributing to a displayed indicator
+
+**Clinical limitation:** This is an educational prototype, not a clinically validated medical device. Demonstration scores and synthetic-data models must not be interpreted as validated medical probabilities or used for diagnosis, treatment or emergency decisions.
+
+## 👥 4. Team Details
+
+- **Team Name:** [Enter Team Name]
+- **Team Leader:** [Enter Team Leader Name]
+- **Team Members:** [Enter All Team Members]
+- **College / Institution:** [Enter College Name]
+- **Department:** [Enter Department]
+- **Incubator:** [Enter Incubator Name or N/A]
+
+## 🛠️ 5. Technical Stack
+
+The intended project stack includes:
+
+- **Frontend:** React, Vite, JavaScript and CSS
+- **Backend:** Python and FastAPI
+- **Data Processing:** Pandas and NumPy
+- **Machine Learning:** Scikit-learn
+- **Testing:** Pytest
+- **Version Control:** Git and GitHub
+
+The final implementation and dependency files should be checked to confirm which technologies are actually used.
+
+## 🤖 6. AI/ML Model and Framework Details
+
+The project explores two analysis approaches:
+
+### A. Rule-Based Analysis
+A transparent demonstration approach can combine selected input signals to produce an illustrative indicator. Its rules and limitations should be documented.
+
+### B. Machine-Learning Workflow
+A synthetic-data model can demonstrate data preparation, model training, prediction and evaluation.
+
+Synthetic labels are not real clinical outcomes. Performance on synthetic data does not establish clinical accuracy or the ability to predict real patient deterioration.
+
+### Future Validation
+A reliable deterioration-prediction model would require:
+- An appropriate dataset with clearly defined outcomes
+- Documented data provenance and permitted usage
+- Patient-level separation of training and test data
+- Appropriate evaluation metrics and calibration
+- Bias, privacy and safety assessments
+- Independent clinical validation before any clinical use
+
+## 🏗️ 7. System Architecture
+
+The intended system workflow is:
+
+1. **User Interface:** Collects or displays health-related inputs.
+2. **Backend API:** Receives requests and coordinates processing.
+3. **Data Processing:** Checks input validity and prepares records.
+4. **Analysis Layer:** Calculates documented indicators or runs the available model.
+5. **Results Layer:** Returns analysis results to the interface.
+6. **Dashboard:** Displays trends and explanatory information.
+
+**Architecture Diagram:** <img width="1536" height="1024" alt="Arogya Sanket Digital Health Pipeline" src="https://github.com/user-attachments/assets/093786f1-3bbc-444d-9372-1191401bb79b" />
+
+Add the actual architecture PDF to the repository before submission.
+
+## 📊 8. Project Presentation
+
+The presentation should cover:
+- Problem statement and motivation
+- Proposed solution
+- Healthcare use case
+- System architecture
+- Technical stack
+- AI/ML workflow
+- Demonstration and outcomes
+- Limitations and future scope
 
 
-## Advanced intelligence workspace (added)
+**Canva Presentation:** https://canva.link/thsmann67linn5l
 
-The **AI Intelligence** navigation item adds a research/demo workspace for:
-- historical EHR context + timestamped wearable signals on a common time axis;
-- a backend `POST /api/v1/intelligence/fusion` endpoint that parses and sorts timestamps, flags missing/invalid timestamps and sensor fields, counts duplicate timestamps, summarizes a supplied-sample median baseline, and reports deviations;
-- a timeline point selector and transparent, hand-written rule summaries (not SHAP attributions);
-- a what-if control panel that demonstrates how the existing demo rules respond to hypothetical sleep, step and heart-rate values;
-- explicit safety/uncertainty limitations and a validation panel that marks AUROC, sensitivity, specificity, precision, calibration, false-alarm rate and lead time as unavailable until labelled outcomes and patient-level held-out evaluation exist.
+Upload the exported PDF or PPT to the repository and verify that it opens correctly.
 
-The fusion endpoint is data engineering and descriptive analysis. A separate educational logistic-regression model is now trained on a reproducible synthetic cohort and can be called with `POST /api/v1/intelligence/predict`. Its labels are generated from an invented formula; it is **not** a clinically trained or validated deterioration model, and its score is not a medical probability. The API flags missing inputs and values outside the synthetic training range, but these are only simple demo guardrails—not calibrated uncertainty or a validated out-of-distribution detector. Its median is only a descriptive baseline of the supplied rows; production baselines need appropriate historical windows and validation. The example EHR fields and records are fictional. The UI includes a **Run synthetic model** action showing a synthetic-only score, coefficient-based explanations, and patient-level holdout metrics. The metrics are explicitly labelled synthetic-only and must not be represented as clinical performance.
+## 📂 10. Repository Structure
 
-### Run the fusion demo
-Start the FastAPI backend and frontend using the steps above. Open **AI Intelligence** and click **Run fusion analysis**. The UI sends synthetic EHR context and the currently displayed timeline to the backend, then shows record-quality counts and the full JSON response.
+The repository should contain the actual project files, for example:
 
-The AI Intelligence page loads editorial images from Unsplash over the internet. If images do not load, the rest of the page still works.
+```text
+digitaltwin/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
+├── backend/
+├── frontend/
+├── scripts/
+├── tests/
+├── sample_data/
+└── docs/
+    ├── architecture.pdf
+    ├── ArogyaSanket_Presentation.pdf
+    ├── DATA_PROVENANCE.md
+    └── TESTING_CHECKLIST.md
+```
 
-## 1. Requirements
+This is an illustrative structure. Keep only directories and files that exist in the submitted project, and upload the complete application code.
 
-- macOS/Linux terminal
-- Python 3.10+ (Python 3.11/3.12 recommended)
-- Node.js 18+ and npm
-- Git (for version control)
+## 🚀 11. Setup and Execution
 
-## 2. Start the backend
+Follow the setup instructions documented for the actual project.
 
-From this project root:
+For a Python backend using FastAPI, a typical environment setup is:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+Start the backend using the command configured in the project. For example, if its entry point is `backend.app.main`:
+
+```bash
 uvicorn backend.app.main:app --reload
 ```
 
-Open `http://127.0.0.1:8000/health` and API docs at `http://127.0.0.1:8000/docs`.
-
-Expected health response has `"status": "ok"` and service `arogyasanket-backend`.
-
-## 3. Start the frontend
-
-Open a **second terminal**, go to this project root, then:
+For a React/Vite frontend, open a second terminal:
 
 ```bash
 cd frontend
 npm install
-cp .env.example .env
 npm run dev
 ```
 
-Open the local URL Vite prints (usually `http://localhost:5173`). Keep both terminals running. The frontend defaults to `http://127.0.0.1:8000`; change `VITE_API_BASE_URL` in `frontend/.env` only if your backend is elsewhere. Restart Vite after changing it.
+These commands depend on the actual project structure and configuration. Verify them by running the application before submission.
 
-## 4. Run automated tests
+## 🧪 12. Testing
 
-From the project root, with the virtual environment active:
+Document the tests that have actually been executed.
+
+If the project uses Pytest:
 
 ```bash
 pytest -q
 ```
 
-Build-check the frontend from another terminal:
+If the frontend uses Vite:
 
 ```bash
 cd frontend
 npm run build
 ```
 
-## 5. Test API integration manually
+Record test results honestly. Do not report tests as passing unless they have been run successfully.
 
-1. Open `http://127.0.0.1:8000/docs`.
-2. Try `POST /api/v1/risk/estimate` with:
+## 🔐 13. Data Privacy and Responsible AI
 
-```json
-{
-  "patient_id": "demo-patient-001",
-  "sleep_hours": 4.5,
-  "steps_today": 1800,
-  "baseline_steps": 6500,
-  "resting_heart_rate": 104,
-  "baseline_resting_heart_rate": 76
-}
-```
+- Do not commit passwords, API keys or secret credentials.
+- Do not publish identifiable patient records.
+- Use synthetic or appropriately authorized and de-identified data.
+- Document data sources and usage restrictions.
+- Explain the limitations of synthetic data.
+- Do not claim clinical accuracy without suitable validation.
+- Do not use demonstration outputs for real medical decisions.
 
-3. Try `POST /api/v1/timeline` with the same body.
-4. Try `GET /api/v1/timeline/demo-patient-001` and confirm the entry is returned.
-5. In the frontend, submit the demo form and check the response panel. The timeline storage is **in-memory only** and is cleared when the backend restarts; it is not production persistence.
-6. Test theme toggle, chart rendering, loading/error state, and browser console.
+## 🔗 15. Submission Links
 
-## 6. Wearable dataset audit and preprocessing
+- **GitHub Repository:** https://github.com/25it3055-dot/digitaltwin
+- **Canva Presentation:** https://canva.link/thsmann67linn5l
+- **Architecture PDF:** <img width="1536" height="1024" alt="Arogya Sanket Digital Health Pipeline" src="https://github.com/user-attachments/assets/9964e4d3-5b50-4688-bcf9-2bc2a6585364" />
 
-Place the source CSV at `data/raw/dataset_activity_skunk.csv`, then run:
 
-```bash
-python scripts/audit_activity_skunk.py data/raw/dataset_activity_skunk.csv
-python scripts/prepare_activity_skunk.py data/raw/dataset_activity_skunk.csv
-```
+## ✅ 16. Submission Checklist
 
-The audit writes `data/processed/activity_skunk_quality_report.json`. The preparation script writes a separate flagged copy at `data/processed/activity_skunk_flagged.csv`; it does **not** delete rows or automatically replace heart-rate values. Inspect flags and source documentation before making any cleaning decisions.
+- [ ] Team details completed
+- [ ] College/incubator information completed
+- [ ] Project title and problem statement documented
+- [ ] Healthcare use case explained
+- [ ] Technical stack verified against the implementation
+- [ ] AI/ML approach and limitations documented
 
-Known limitation: this activity dataset has no patient identifier, calendar date, or clinical deterioration outcome labels. It cannot by itself support patient-level timeline linkage or train a deterioration prediction model. Hour/minute fields alone do not establish which observations belong to a particular patient or day.
+- [ ] Architecture diagram PDF/PPT uploaded
+- [ ] Project presentation PDF/PPT uploaded
+- [ ] Complete source code uploaded
+- [ ] Repository and required links publicly accessible
 
-## 7. Synthetic model demo and data provenance
+---
 
-The project includes a generated dataset at `data/processed/synthetic_deterioration_cohort.csv`, a trained artifact at `backend/app/artifacts/synthetic_baseline.joblib`, and metrics at `data/processed/synthetic_validation_metrics.json`. Rebuild them with:
-
-```bash
-python scripts/train_synthetic_model.py
-```
-
-The generated cohort has 240 simulated patients and 1,920 snapshots. The binary `event_within_2h` label is created by a hand-written formula; it is not a real clinical outcome. A patient-level grouped split prevents patients from appearing in both training and test groups. Metrics (AUROC, sensitivity, specificity, precision, Brier score, balanced accuracy and false-alarm rate) measure only recovery of the simulated rule. Lead time is unavailable because the synthetic cohort has no event-onset timestamps. See `docs/DATA_PROVENANCE.md` and `docs/RISK_MODEL_READINESS.md`.
-
-## 8. Risk-model readiness
-
-See `docs/RISK_MODEL_READINESS.md`. Do not train/evaluate a model until an authorized dataset has a defined outcome, time horizon, patient identifier, appropriate features, and enough positive/negative examples. Use patient-level splits to avoid leakage. The optional scaffold `scripts/train_baseline.py` intentionally requires explicit target and patient-ID columns and will stop if they are missing. It is not a clinical model certification.
-
-## 9. Before deployment
-
-- Do not use real patient identifiers or health records in this demo.
-- Set `AROGYASANKET_CORS_ORIGINS` to a comma-separated list of exact allowed frontend origins (local origins are the default).
-- Replace in-memory timeline storage with a secure database and authentication/authorization.
-- Add audit logging, privacy/security review, backups, rate limits, and environment-specific secrets.
-- Deploy frontend and backend separately if needed; set `VITE_API_BASE_URL` to the deployed backend URL and configure CORS for the exact frontend origin.
-- Do not claim clinical prediction or validation unless supported by appropriate evidence and review.
-
-See `docs/WORK_PLAN.md` and `docs/TESTING_CHECKLIST.md` for the Phase 1–5 task breakdown.
-
-## Frontend navigation update
-
-The frontend now includes working navigation views for Overview, Patients, Wearable data, Risk timeline, Settings, and Help center. Preferences are stored locally in the browser. The patient directory and signal values are fictional demo content. For frontend setup, see `frontend/README.md`.
-# digtaltwin
+**ArogyaSanket — Making Health Trends Easier to Explore Through Data and AI.**
